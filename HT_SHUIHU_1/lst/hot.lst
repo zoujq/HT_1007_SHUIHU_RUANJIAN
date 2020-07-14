@@ -1,4 +1,4 @@
-C51 COMPILER V9.56.0.0   HOT                                                               07/14/2020 15:30:00 PAGE 1   
+C51 COMPILER V9.56.0.0   HOT                                                               07/14/2020 21:20:08 PAGE 1   
 
 
 C51 COMPILER V9.56.0.0, COMPILATION OF MODULE HOT
@@ -62,7 +62,7 @@ line level    source
   49          void set_hot_power(unsigned char n)
   50          {   
   51   1        static unsigned char p=1;
-C51 COMPILER V9.56.0.0   HOT                                                               07/14/2020 15:30:00 PAGE 2   
+C51 COMPILER V9.56.0.0   HOT                                                               07/14/2020 21:20:08 PAGE 2   
 
   52   1        if(p!=n)
   53   1        {
@@ -102,38 +102,46 @@ line level    source
   84   4            }
   85   3            else 
   86   3            {
-  87   4              set_hot_power(10);
-  88   4            }
-  89   3            hot_status=1;
-  90   3          }
-  91   2          else
-  92   2          {
-  93   3            guan_bi_jia_re();
-*** WARNING C206 IN LINE 93 OF source\hot.c: 'guan_bi_jia_re': missing function-prototype
-  94   3            hot_status=0;
-  95   3            set_hot_power(0);
-  96   3          }
-  97   2          
-  98   2        }
-  99   1        else
- 100   1        {
- 101   2          set_hot_power(0);
- 102   2        }
- 103   1        
- 104   1      
- 105   1      }
- 106          
- 107          
+  87   4              if(jia_re_wen_du>90 || bao_wen_status>90 )
+  88   4              {
+  89   5                set_hot_power(30);
+  90   5              }
+  91   4              else
+  92   4              {
+  93   5                set_hot_power(10);
+  94   5              }
+  95   4              
+  96   4            }
+  97   3            hot_status=1;
+  98   3          }
+  99   2          else
+ 100   2          {
+ 101   3            guan_bi_jia_re();
+*** WARNING C206 IN LINE 101 OF source\hot.c: 'guan_bi_jia_re': missing function-prototype
+ 102   3            hot_status=0;
+ 103   3            set_hot_power(0);
+ 104   3          }
+ 105   2          
+ 106   2        }
+ 107   1        else
+ 108   1        {
+ 109   2          set_hot_power(0);
+C51 COMPILER V9.56.0.0   HOT                                                               07/14/2020 21:20:08 PAGE 3   
 
+ 110   2        }
+ 111   1        
+ 112   1      
+ 113   1      }
+ 114          
+ 115          
 
-C51 COMPILER V9.56.0.0   HOT                                                               07/14/2020 15:30:00 PAGE 3   
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    218    ----
+   CODE SIZE        =    242    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      2       5
+   DATA SIZE        =      2       6
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
    EDATA SIZE       =   ----    ----

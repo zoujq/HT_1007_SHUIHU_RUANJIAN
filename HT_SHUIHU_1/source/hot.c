@@ -84,7 +84,15 @@ void check_hot()
 			}
 			else 
 			{
-				set_hot_power(10);
+				if(jia_re_wen_du>90 || bao_wen_status>90 )
+				{
+					set_hot_power(30);
+				}
+				else
+				{
+					set_hot_power(10);
+				}
+				
 			}
 			hot_status=1;
 		}

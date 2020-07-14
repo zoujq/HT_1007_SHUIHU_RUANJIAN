@@ -1,4 +1,4 @@
-C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:04:54 PAGE 1   
+C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:27:37 PAGE 1   
 
 
 C51 COMPILER V9.56.0.0, COMPILATION OF MODULE TEMPERATURE
@@ -62,7 +62,7 @@ line level    source
   49   1        
   50   1      
   51   1      /**********初始化ADC寄存器（设置ADC时钟、选择ADC参考电压、设置ADC运放、加载内部1.5V校准值）***********/
-C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:04:54 PAGE 2   
+C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:27:37 PAGE 2   
 
   52   1      //  ADCON = AST(0) | ADIE(0) | HTME(7) | VSEL(ADC_REF_INNER);   //设置ADC参考电压为内部1.5V
   53   1        ADCON = AST(0) | ADIE(0) | HTME(7) | VSEL(ADC_REF_VDD);       //设置ADC参考电压为VDD
@@ -98,7 +98,7 @@ line level    source
   83   1      }
   84          unsigned int code Temp_Table[90]={  
   85            //10    9     8     7     6      5     4     3     2     1
-  86            600,  610,  640,  670,  700,   730,  760,  790,  820,  850,  //90-10
+  86            740,  742,  743,  745,  750,   755,  760,  790,  820,  850,  //90-10
   87            880,  885,  890,  895,  900,   918,  936,  954,  972,  990,  //80
   88           1200, 1250,  1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650,  //70
   89           1700, 1750,  1800, 1880, 1960, 2040, 2120, 2200, 2300, 2400,  //60
@@ -126,7 +126,7 @@ line level    source
  111   1        adc_cpy[0]=adc[0];
  112   1        adc_cpy[1]=adc[1];
  113   1        adc_cpy[2]=adc[2];
-C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:04:54 PAGE 3   
+C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:27:37 PAGE 3   
 
  114   1        adc_cpy[3]=adc[3];
  115   1        adc_cpy[4]=adc[4];
@@ -190,7 +190,7 @@ line level    source
  173   2            current_temp=100-n;
  174   2          
  175   2        }
-C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:04:54 PAGE 4   
+C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:27:37 PAGE 4   
 
  176   1      
  177   1        
@@ -254,7 +254,7 @@ line level    source
  235   1        
  236   1      }
  237          
-C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:04:54 PAGE 5   
+C51 COMPILER V9.56.0.0   TEMPERATURE                                                       07/14/2020 21:27:37 PAGE 5   
 
  238          
  239          
